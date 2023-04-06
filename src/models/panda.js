@@ -11,6 +11,7 @@ const Panda = sequelize.define('Panda', {
   habitat: 'ocean'
 });
 
+
 module.exports = {
   sequelize,
   Panda,
