@@ -1,12 +1,13 @@
 'use strict';
 
 function validator (request, response, next) {
-  if (request.query.name) {
-    console.log('request has name');
-  } else {
+  const name = request.body.name;
+  if (name) {
     console.log('request does not have name');
+  } else {
+    console.log('request has name');
+    next();
   }
-  console.log('I feel validated');
 }
 
 module.exports = validator;

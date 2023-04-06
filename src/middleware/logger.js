@@ -1,11 +1,10 @@
 'use strict';
 
 function logger (request, response, next) {
-  // log request method
-  console.log(request.method);
-  // log request path
-  console.log(request.path);
-  console.log('Sometimes a great notion');
+  // log request
+  let method = request.method;
+  let path = request.path;
+  console.log(`request received: ${method}, ${path}`);
   next();
 }
 
